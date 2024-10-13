@@ -1,0 +1,104 @@
+@use "variables" as *;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  // text-align: center;
+
+  // height: 100vh;
+  // height: 100dvh;
+}
+.css-generator-container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 16px;
+  .input-container {
+    padding-top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .input-box-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      .input-item {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        // font-size: 16px;
+        gap: 0.25em;
+        width: 100%;
+        max-width: calc(100% / 2);
+        .input-ttl {
+          font-size: 1em;
+        }
+        .input-box {
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          input {
+            width: 100%;
+            font-size: 0.875em;
+            padding: 0.5em 0.875em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            position: relative;
+          }
+          .unit {
+            display: inline-block;
+            position: absolute;
+            right: 0.875em;
+          }
+        }
+        &.center {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .output-container {
+    padding-top: 62px;
+    .output-txt-area {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      .output-ttl {
+      }
+      .output-txt {
+        padding: 1em;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        background-color: #ddd;
+        transition: all ease 0.2s;
+        position: relative;
+        overflow: hidden;
+        .result-copied {
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: #666;
+          border-radius: 0 0 0 5px;
+          color: white;
+          font-size: 14px;
+          line-height: 1em;
+          padding: 0.5em;
+          transform: translateY(-0.5em);
+          transition: all ease 0.1s;
+          opacity: 0;
+        }
+        &:hover {
+          background-color: #eee;
+          .result-copied {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

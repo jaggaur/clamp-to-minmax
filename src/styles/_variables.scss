@@ -1,0 +1,21 @@
+$base-color: #333;
+
+// Font size
+
+.font-size-normal {
+  // font-size: 16px;
+  font-size: clamp(14px, 1rem + 1.556vw, 16px);
+}
+.font-size-small {
+  font-size: 14px;
+}
+
+.txt-align-right {
+  text-align: right;
+}
+.txt-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}

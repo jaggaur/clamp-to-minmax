@@ -1,0 +1,7 @@
+input {
+  &:focus-visible {
+    outline: inherit;
+    box-shadow: inherit;
+    outline-offset: inherit;
+  }
+}
