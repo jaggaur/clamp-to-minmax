@@ -1,8 +1,14 @@
-# React + Vite
+# Clamp か minmax を生成
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+レスポンシブするときの数値設定を簡単にするツール
 
-Currently, two official plugins are available:
+## 出力されるCSS
+clamp(最小サイズpx, 可変サイズvw, 最大サイズpx);
+min(最小ザイズpx, max(可変サイズvw, 最大サイズpx));
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 計算式
+可変サイズ :
+最小サイズpx / 基準値px * 100
+
+例 :
+14px / 720px = 1.944vw
