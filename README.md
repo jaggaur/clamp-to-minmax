@@ -1,4 +1,4 @@
-# Clamp か minmax を生成
+# Clamp と minmax を生成
 
 レスポンシブするときの数値設定を簡単にするツール
 
